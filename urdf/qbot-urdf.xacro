@@ -1,0 +1,165 @@
+<?xml version="1.0" ?>
+<robot name="qbot-urdf" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find qbot-urdf_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find qbot-urdf_description)/urdf/qbot-urdf.trans" />
+<xacro:include filename="$(find qbot-urdf_description)/urdf/qbot-urdf.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-9.562856620619356e-05 -2.3834541287568013e-05 0.06377004995936014"/>
+    <mass value="0.4341808115577019"/>
+    <inertia ixx="0.001744" ixy="0.0" ixz="3.1e-05" iyy="0.001414" iyz="-0.0" izz="0.001778"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://qbot-urdf_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://qbot-urdf_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0032369885513544375 -0.000363627882546586 0.013199471314095074"/>
+    <mass value="0.010966225281964493"/>
+    <inertia ixx="5e-06" ixy="-0.0" ixz="-0.0" iyy="5e-06" iyz="-0.0" izz="1e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.05581 2.6e-05 -0.080623"/>
+    <geometry>
+      <mesh filename="package://qbot-urdf_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.05581 2.6e-05 -0.080623"/>
+    <geometry>
+      <mesh filename="package://qbot-urdf_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="left_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.7773601634907266e-07 0.0001934840502160473 -1.502494489241668e-07"/>
+    <mass value="0.01991817311932673"/>
+    <inertia ixx="3e-06" ixy="-0.0" ixz="0.0" iyy="6e-06" iyz="-0.0" izz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.036697 -0.059674 -0.021123"/>
+    <geometry>
+      <mesh filename="package://qbot-urdf_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.036697 -0.059674 -0.021123"/>
+    <geometry>
+      <mesh filename="package://qbot-urdf_description/meshes/left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="right_wheel_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.7773601597437239e-07 -0.00019353902336186057 -1.502494476300631e-07"/>
+    <mass value="0.01991817311932673"/>
+    <inertia ixx="3e-06" ixy="-0.0" ixz="0.0" iyy="6e-06" iyz="0.0" izz="3e-06"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.036697 0.059726 -0.021123"/>
+    <geometry>
+      <mesh filename="package://qbot-urdf_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.036697 0.059726 -0.021123"/>
+    <geometry>
+      <mesh filename="package://qbot-urdf_description/meshes/right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="bateria11v_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.006122822263983904 -0.0008030274865728127 0.017375849750557667"/>
+    <mass value="0.34643451536729414"/>
+    <inertia ixx="0.0006" ixy="-0.0" ixz="0.0" iyy="9.1e-05" iyz="0.0" izz="0.000651"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.016926 -0.000777 -0.012097"/>
+    <geometry>
+      <mesh filename="package://qbot-urdf_description/meshes/bateria11v_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.016926 -0.000777 -0.012097"/>
+    <geometry>
+      <mesh filename="package://qbot-urdf_description/meshes/bateria11v_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="base_rplidar_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.03589689207758375 0.027884119521346243 0.02478675716160393"/>
+    <mass value="0.015390780356555523"/>
+    <inertia ixx="7e-06" ixy="-0.0" ixz="0.0" iyy="1.2e-05" iyz="-0.0" izz="1.8e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.08381 0.028026 -0.050123"/>
+    <geometry>
+      <mesh filename="package://qbot-urdf_description/meshes/base_rplidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.08381 0.028026 -0.050123"/>
+    <geometry>
+      <mesh filename="package://qbot-urdf_description/meshes/base_rplidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Rigid10" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.028 0.028 0.0305"/>
+  <parent link="base_rplidar_1"/>
+  <child link="lidar_1"/>
+</joint>
+
+<joint name="Rev15" type="continuous">
+  <origin rpy="0 0 0" xyz="0.036697 0.059674 0.021123"/>
+  <parent link="base_link"/>
+  <child link="left_wheel_1"/>
+  <axis xyz="-0.0 1.0 -0.0"/>
+</joint>
+
+<joint name="Rev16" type="continuous">
+  <origin rpy="0 0 0" xyz="0.036697 -0.059726 0.021123"/>
+  <parent link="base_link"/>
+  <child link="right_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid18" type="fixed">
+  <origin rpy="0 0 0" xyz="-0.016926 0.000777 0.012097"/>
+  <parent link="base_link"/>
+  <child link="bateria11v_1"/>
+</joint>
+
+<joint name="Rigid19" type="fixed">
+  <origin rpy="0 0 0" xyz="0.08381 -0.028026 0.050123"/>
+  <parent link="base_link"/>
+  <child link="base_rplidar_1"/>
+</joint>
+
+</robot>
